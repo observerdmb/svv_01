@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{% block title %}codename_svv{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div id="container">
+{% block nav %}
+    <div id="navigation">
+        <a href="{% url 'empty_page' %}">Кто мы такие</a>  |  <a href="{% url 'empty_page' %}">Партнерам</a>  |  <a href="{% url 'empty_page' %}">Правила</a>  |
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}">Выход</a>
+        {% else %}
+        <a href="{% url 'log-in' %}">Вход</a>  |  <a href="/accounts/register">Регистрация</a>
+        {% endif %}
+        <hr>
+    </div>
+
+    {% endblock %}
+    {% block aside %}
+    <div id="menu">
+        <H4>Главное</H4>
+        <p><a href="{% url 'main_page' %}">Моя страница</a></p>
+        <p><a href="{% url 'empty_page' %}">Друзья</a></p>
+        <p><a href="{% url 'empty_page' %}">Подписки</a></p>
+        <p><a href="{% url 'empty_page' %}">Новости</a></p>
+        <p><a href="{% url 'empty_page' %}">Сообщения</a></p>
+        <p><a href="{% url 'empty_page' %}">Чат</a></p>
+        <H4>Покупки</H4>
+        <p><a href="{% url 'empty_page' %}">Объявления</a></p>
+        <p><a href="{% url 'empty_page' %}">Мои заказы</a></p>
+        <p><a href="{% url 'empty_page' %}">Обмен</a></p>
+        <H4>Полезно</H4>
+        <p><a href="{% url 'empty_page' %}">Майнинг</a></p>
+        <p><a href="{% url 'empty_page' %}">Биржи</a></p>
+        <p><a href="{% url 'empty_page' %}">ICO</a></p>
+    </div>
+    {% endblock %}
+
+
+    <div id="content">
+        {% block content %}
+        <img src="http://kotomatrix.ru/images/lolz/2009/08/11/338310.jpg">
+        {% endblock %}
+    </div>
+
+	<div id="clear">
+
+	</div>
+
+    <div id="footer">
+		<hr>
+        <p align="center">Вот такая вот хуйня, товарищи!</p>
+    </div>
+</div>
+</body>
+</html>

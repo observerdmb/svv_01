@@ -1,0 +1,11 @@
+from django.conf.urls import url
+from . import views
+from django.contrib.auth.views import logout
+
+
+urlpatterns = [
+    url(r'^main', views.main, name='main_page'),
+    url('^not_exists/', views.empty_view, name='empty_page'),
+    url('login/', views.empty_view, name='log-in'),
+    url('logout/', logout, {'template_name': 'empty.html', 'next_page': '/admin'}, name='logout'),
+]

@@ -1,0 +1,45 @@
+body {
+	background: #f3f3f3;
+}
+
+#container {
+	height: 900px;
+	width: 900px;
+}
+	
+#navigation {
+	background: ffffff;
+	height: 50px;
+	width: 900px;
+}
+
+#menu {
+	float: left;
+	height: 650px;
+	width: 150px;
+}
+
+#content {
+	float: right;
+	height: 650px;
+	width: 750px;
+}
+
+#clear: {
+	clear: both;
+}
+
+#footer {
+	clear: both;
+	height: 50px;
+	width: 900px;
+}
+
+h1 {
+    color: #FCA205;
+}
+
+h4 {
+    color: red;
+}
+
