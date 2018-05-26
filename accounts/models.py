@@ -1,8 +1,10 @@
 # coding: utf8
+from PIL import Image
 from django.db import models
 from django.contrib.auth.models import (
     BaseUserManager, AbstractBaseUser
 )
+
 
 
 class ProfileManager(BaseUserManager):
@@ -34,14 +36,12 @@ class ProfileManager(BaseUserManager):
 
 
 class Profile(AbstractBaseUser):
-    email = models.EmailField(
-        verbose_name='email address',
-        max_length=255,
-        unique=True,
-    )
+    email = models.EmailField(verbose_name='email address', max_length=255, unique=True,)
     full_name = models.CharField(verbose_name='Полное имя', max_length=30, null=True, blank=True)
     nick_name = models.CharField(verbose_name='Ник', max_length=30, null=True, blank=True)
     date_of_birth = models.DateField(null=True, blank=True)
+    photo = models.ImageField(upload_to='profiles//%Y/%m/%d/', verbose_name='Фото', blank=True, null=True)
+    about_me = models.TextField(verbose_name='обо мне', blank=True, null=True)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
 
@@ -49,6 +49,22 @@ class Profile(AbstractBaseUser):
 
     USERNAME_FIELD = 'email'
     # REQUIRED_FIELDS = ['full_name', 'nick_name']
+
+    def save(self, *args, **kwargs):
+        super(Profile, self).save(*args, **kwargs)
+        if self.photo:
+            wanted_dim = 250
+            file = self.photo.path
+            height = self.photo.height
+            width = self.photo.width
+            if width != wanted_dim:
+                max_side = max(height, width)
+                k = wanted_dim / max_side
+                new_width = round(width * k)
+                new_height = round(height * k)
+                picture = Image.open(file)
+                picture = picture.resize((new_width, new_height), Image.ANTIALIAS)
+                picture.save(file)
 
     def get_full_name(self):
         # The user is identified by their email address

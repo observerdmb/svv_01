@@ -120,5 +120,8 @@ AUTH_USER_MODEL = 'accounts.Profile'
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'img')
+MEDIA_URL = '/media/'
+
 
 # TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
