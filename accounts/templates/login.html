@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {% for field in login_form %}
+                <tr>
+                    <td> {{ field.label }}</td>
+                    <td>{{ field }}</td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td><input type="submit" value="Вход" name="login_form"></td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}

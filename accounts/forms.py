@@ -3,6 +3,15 @@ from django import forms
 from .models import Profile
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
+
+class LoginForm(forms.Form):
+    email = forms.EmailField(label='Ваш E-Mail:')
+    password = forms.CharField(widget=forms.PasswordInput, label='Пароль:')
+    # class Meta:
+    #     model = Profile
+    #     fields = ('email', 'password')
+
+
 class UserCreationForm(forms.ModelForm):
 
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
@@ -38,7 +47,6 @@ class UserChangeForm(forms.ModelForm):
         fields = ('email', 'password', 'full_name', 'nick_name', 'date_of_birth', 'about_me', 'photo', 'is_active', 'is_admin')
 
     def clean_password(self):
-
         return self.initial["password"]
 
 

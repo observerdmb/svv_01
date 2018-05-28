@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <img src="{{ photo.url }}">
+    <div id="content_detail">
+        <img class="displayed" src="{{ photo.url }}">
+    </div>
+    <div id="content_main">
+        <h1>main content</h1>
+    </div>
 {% endblock %}
