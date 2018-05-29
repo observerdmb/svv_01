@@ -38,8 +38,10 @@ class ProfileManager(BaseUserManager):
 class Profile(AbstractBaseUser):
     email = models.EmailField(verbose_name='email address', max_length=255, unique=True,)
     full_name = models.CharField(verbose_name='Полное имя', max_length=30, null=True, blank=True)
-    nick_name = models.CharField(verbose_name='Ник', max_length=30, null=True, blank=True)
+    nick_name = models.CharField(verbose_name='Ник', max_length=30, null=True, blank=True, unique=True)
     date_of_birth = models.DateField(null=True, blank=True)
+    country = models.CharField(verbose_name='Страна', max_length=30, null=True, blank=True)
+    city = models.CharField(verbose_name='Город', max_length=30, null=True, blank=True)
     photo = models.ImageField(upload_to='profiles//%Y/%m/%d/', verbose_name='Фото', blank=True, null=True)
     about_me = models.TextField(verbose_name='обо мне', blank=True, null=True)
     is_active = models.BooleanField(default=True)

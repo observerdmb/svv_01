@@ -2,6 +2,7 @@ from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from .models import Profile
 from .forms import LoginForm
+import os
 
 def main(request):
     template = 'main.html'
@@ -11,11 +12,16 @@ def main(request):
         context['email'] = user_data.email
         context['nick'] = user_data.nick_name
         context['full_name'] = user_data.full_name
+        context['country'] = user_data.country
+        context['city'] = user_data.city
         context['birth'] = user_data.date_of_birth
+        context['about_me'] = user_data.about_me
         if user_data.photo:
             context['photo'] = user_data.photo
         else:
-            context['photo']
+            BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            no_photo = os.path.join(BASE_DIR, '\\img\\profiles\\unknown.png')
+            context['photo'] = no_photo
     return render(request, template, context)
 
 def login_user(request):

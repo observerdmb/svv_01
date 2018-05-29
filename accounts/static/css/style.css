@@ -1,5 +1,5 @@
 body {
-	background: #f3f3f3;
+	background: #dcf3e5;
 }
 
 #container {
@@ -8,13 +8,13 @@ body {
 }
 	
 #navigation {
-	background: #000000;
+	background: #000032;
 	height: 50px;
 	width: 900px;
 }
 
 #menu {
-	background: grey;
+	background: linear-gradient(#000032, #4f8688);
 	float: left;
 	height: 650px;
 	width: 150px;
@@ -24,16 +24,14 @@ body {
 	float: right;
 	height: 650px;
 	width: 750px;
-	background: yellowgreen;
+	background: rgba(131, 177, 249, 0.3);
 }
 
 #content_header {
 	height: 50px;
 	width: 750px;
-	background: deepskyblue;
+	background: white;
 }
-
-
 
 #content_detail {
 	text-align: left;
@@ -42,7 +40,7 @@ body {
 	height: 545px;
 	width: 210px;
 	position: absolute;
-	background: red;
+	background: white;
 	padding: 10px;
 	margin: 10px;
 }
@@ -53,7 +51,7 @@ body {
 	float: right;
 	height: 545px;
 	width: 460px;
-	background: purple;
+	background: white;
 	padding: 10px;
 	margin: 10px;
 	border-radius: 10px;
@@ -67,7 +65,7 @@ body {
 	clear: both;
 	height: 50px;
 	width: 900px;
-	background: yellow;
+	background: #4f8688;
 }
 
 h1 {
