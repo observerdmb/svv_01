@@ -9,9 +9,13 @@ def main(request):
     if request.user.is_authenticated:
         user_data = Profile.objects.get(email=request.user)
         context['email'] = user_data.email
-        # context[]
+        context['nick'] = user_data.nick_name
+        context['full_name'] = user_data.full_name
+        context['birth'] = user_data.date_of_birth
         if user_data.photo:
             context['photo'] = user_data.photo
+        else:
+            context['photo']
     return render(request, template, context)
 
 def login_user(request):

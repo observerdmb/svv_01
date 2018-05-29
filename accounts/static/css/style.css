@@ -27,27 +27,36 @@ body {
 	background: yellowgreen;
 }
 
+#content_header {
+	height: 50px;
+	width: 750px;
+	background: deepskyblue;
+}
+
+
+
 #content_detail {
+	text-align: left;
 	float: left;
-	height: 600px;
-	width: 230px;
+	border-radius: 10px;
+	height: 545px;
+	width: 210px;
 	position: absolute;
 	background: red;
 	padding: 10px;
+	margin: 10px;
 }
 
-IMG.displayed {
-    display: block;
-    margin-left: auto;
-    margin-right: auto }
+
 
 #content_main {
 	float: right;
-	height: 600px;
-	width: 480px;
+	height: 545px;
+	width: 460px;
 	background: purple;
 	padding: 10px;
-
+	margin: 10px;
+	border-radius: 10px;
 }
 
 #clear {
@@ -69,3 +78,17 @@ h4 {
     color: red;
 }
 
+h5.centered {
+	text-align: center;
+}
+
+IMG.displayed {
+	border-radius: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#vcenter {
+	line-height: 50px;
+}

@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+    <div id="content_header">
+        <div id="vcenter">Аккаунт</div>
+    </div>
     <div id="content_detail">
         <img class="displayed" src="{{ photo.url }}">
+        <h5 class="centered">{{ nick }}</h5>
+        <h5>Имя: {{ full_name }}</h5>
+        <h5>Email: {{ email }}</h5>
+        <h5>Дата рождения: {{ birth }}</h5>
     </div>
     <div id="content_main">
         <h1>main content</h1>
