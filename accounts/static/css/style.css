@@ -4,32 +4,32 @@ body {
 
 #container {
 	height: 900px;
-	width: 900px;
+	width: 1280px;
 }
 	
 #navigation {
 	background: #000032;
 	height: 50px;
-	width: 900px;
+	width: 1280px;
 }
 
 #menu {
 	background: linear-gradient(#000032, #4f8688);
 	float: left;
 	height: 650px;
-	width: 150px;
+	width: 200px;
 }
 
 #content {
 	float: right;
 	height: 650px;
-	width: 750px;
+	width: 1080px;
 	background: rgba(131, 177, 249, 0.3);
 }
 
 #content_header {
 	height: 50px;
-	width: 750px;
+	width: 1080px;
 	background: white;
 }
 
@@ -38,8 +38,8 @@ body {
 	float: left;
 	border-radius: 10px;
 	height: 545px;
-	width: 210px;
-	position: absolute;
+	width: 310px;
+	/*position: absolute;*/
 	background: white;
 	padding: 10px;
 	margin: 10px;
@@ -50,7 +50,7 @@ body {
 #content_main {
 	float: right;
 	height: 545px;
-	width: 460px;
+	width: 690px;
 	background: white;
 	padding: 10px;
 	margin: 10px;
@@ -64,7 +64,7 @@ body {
 #footer {
 	clear: both;
 	height: 50px;
-	width: 900px;
+	width: 1280px;
 	background: #4f8688;
 }
 
