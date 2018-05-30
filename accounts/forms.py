@@ -2,14 +2,18 @@ from django.contrib.auth.forms import ReadOnlyPasswordHashField
 from django import forms
 from .models import Profile
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+from registration.forms import RegistrationForm
 
 
 class LoginForm(forms.Form):
     email = forms.EmailField(label='Ваш E-Mail:')
     password = forms.CharField(widget=forms.PasswordInput, label='Пароль:')
-    # class Meta:
-    #     model = Profile
-    #     fields = ('email', 'password')
+
+
+class AccountRegistrationForm(RegistrationForm):
+    class Meta:
+        model = Profile
+        fields = ('email', 'nick_name', 'password1', 'password2')
 
 
 class UserCreationForm(forms.ModelForm):

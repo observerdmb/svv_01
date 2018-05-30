@@ -2,7 +2,11 @@ from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from .models import Profile
 from .forms import LoginForm
-import os
+
+
+class NoPhoto():
+    url = 'media\\profiles\\unknown.png'
+
 
 def main(request):
     template = 'main.html'
@@ -19,9 +23,9 @@ def main(request):
         if user_data.photo:
             context['photo'] = user_data.photo
         else:
-            BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-            no_photo = os.path.join(BASE_DIR, '\\img\\profiles\\unknown.png')
+            no_photo = NoPhoto()
             context['photo'] = no_photo
+
     return render(request, template, context)
 
 def login_user(request):

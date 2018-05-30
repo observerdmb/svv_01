@@ -6,18 +6,20 @@
             <div id="vcenter">Моя страница</div>
         </div>
         <div id="content_detail">
-            <img class="displayed" src="{{ photo.url }}">
-            <h5 class="centered">{{ nick }}</h5>
-            <h5>Имя: {{ full_name }}</h5>
-            <h5>Email: {{ email }}</h5>
-            <h5>Страна: {{ country }}</h5>
-            <h5>Город: {{ city }}</h5>
-            <h5>Дата рождения: {{ birth }}</h5>
+            <div id="photo">
+                <img class="displayed" src="{{ photo.url }}">
+                <h5 class="centered">{{ nick }}</h5>
+                <h5>Имя: {{ full_name }}</h5>
+                <h5>Email: {{ email }}</h5>
+                <h5>Страна: {{ country }}</h5>
+                <h5>Город: {{ city }}</h5>
+                <h5>Дата рождения: {{ birth }}</h5>
+            </div>
         </div>
         <div id="content_main">
             <h1>main content</h1>
             <p>Обо мне:</p>
-            <p> {{ about_me }}</p>
+            <p>{{ about_me }}</p>
         </div>
     {% else %}
         <div id="vcenter" align="center">
