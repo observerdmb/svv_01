@@ -5,6 +5,7 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from registration.forms import RegistrationForm
 
 
+
 class LoginForm(forms.Form):
     email = forms.EmailField(label='Ваш E-Mail:')
     password = forms.CharField(widget=forms.PasswordInput, label='Пароль:')
@@ -14,6 +15,21 @@ class AccountRegistrationForm(RegistrationForm):
     class Meta:
         model = Profile
         fields = ('email', 'nick_name', 'password1', 'password2')
+
+class AccountEditForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        exclude = ['email', 'is_active', 'is_admin', 'last_login', 'password']
+        widgets = {
+            'full_name': forms.TextInput(attrs={'placeholder': ''}),
+            'nick_name': forms.TextInput(attrs={'placeholder': ''}),
+            # 'date_of_birth': forms.DateField(input_formats='%d.%m.%Y'),
+            'date_of_birth': forms.TextInput(attrs={'placeholder': ''}),
+            'about_me': forms.Textarea(attrs={'placeholder': ''}),
+            'country': forms.TextInput(attrs={'placeholder': ''}),
+            'city': forms.TextInput(attrs={'placeholder': ''}),
+        }
+        # fields = ('full_name', 'nick_name', 'date_of_birth', 'about_me', 'photo')
 
 
 class UserCreationForm(forms.ModelForm):

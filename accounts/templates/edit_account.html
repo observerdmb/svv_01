@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {% for field in edit_account_form %}
+                <tr>
+                    <td> {{ field.label }}</td>
+                    <td>{{ field }}</td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td><input type="submit" value="Сохранить" name="edit_account_form"></td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}
