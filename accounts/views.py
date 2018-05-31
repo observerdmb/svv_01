@@ -31,6 +31,7 @@ def edit_account(request):
     user_data = Profile.objects.get(email=request.user)
     if request.method == 'POST':
         edited_details = request.POST
+        print(edited_details)
         if edited_details['full_name'] is not '':
             user_data.full_name = edited_details['full_name']
         if edited_details['nick_name'] is not '':
@@ -43,8 +44,9 @@ def edit_account(request):
             user_data.city = edited_details['city']
         if edited_details['country'] is not '':
             user_data.country = edited_details['country']
+        if edited_details['photo'] is not '':
+            user_data.photo = edited_details['photo']
         user_data.save()
-
     template = 'edit_account.html'
     form = AccountEditForm()
     form.fields['full_name'].widget.attrs['placeholder'] = user_data.full_name
@@ -53,8 +55,6 @@ def edit_account(request):
     form.fields['about_me'].widget.attrs['placeholder'] = user_data.about_me
     form.fields['city'].widget.attrs['placeholder'] = user_data.city
     form.fields['country'].widget.attrs['placeholder'] = user_data.country
-
-
     context = {'edit_account_form': form}
     return render(request, template, context)
 

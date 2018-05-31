@@ -23,13 +23,11 @@ class AccountEditForm(forms.ModelForm):
         widgets = {
             'full_name': forms.TextInput(attrs={'placeholder': ''}),
             'nick_name': forms.TextInput(attrs={'placeholder': ''}),
-            # 'date_of_birth': forms.DateField(input_formats='%d.%m.%Y'),
             'date_of_birth': forms.TextInput(attrs={'placeholder': ''}),
             'about_me': forms.Textarea(attrs={'placeholder': ''}),
             'country': forms.TextInput(attrs={'placeholder': ''}),
             'city': forms.TextInput(attrs={'placeholder': ''}),
         }
-        # fields = ('full_name', 'nick_name', 'date_of_birth', 'about_me', 'photo')
 
 
 class UserCreationForm(forms.ModelForm):
