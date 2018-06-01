@@ -2,7 +2,19 @@ from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from .models import Profile
 from .forms import LoginForm, AccountEditForm
+from django.core.files.storage import FileSystemStorage as _FileSystemStorage
+import os
+from datetime import datetime
+from django.utils.functional import LazyObject, cached_property
 
+class FileSystemStorage(_FileSystemStorage):
+    @cached_property
+    def base_location(self):
+        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        MEDIA_ROOT = os.path.join(BASE_DIR, 'img')
+        path_suffix = datetime.today().strftime('profiles\\%Y\\%m\\%d')
+        filepath = os.path.join(MEDIA_ROOT, path_suffix)
+        return self._value_or_setting(self._location, filepath)
 
 class NoPhoto():
     url = 'media\\profiles\\unknown.png'
@@ -31,7 +43,7 @@ def edit_account(request):
     user_data = Profile.objects.get(email=request.user)
     if request.method == 'POST':
         edited_details = request.POST
-        print(edited_details)
+        edited_photo = request.FILES
         if edited_details['full_name'] is not '':
             user_data.full_name = edited_details['full_name']
         if edited_details['nick_name'] is not '':
@@ -44,8 +56,12 @@ def edit_account(request):
             user_data.city = edited_details['city']
         if edited_details['country'] is not '':
             user_data.country = edited_details['country']
-        if edited_details['photo'] is not '':
-            user_data.photo = edited_details['photo']
+        if edited_photo['photo']:
+            avatar = edited_photo['photo']
+            fs = FileSystemStorage()
+            filename = fs.save(avatar.name, avatar)
+            filepath = os.path.join(fs.location, filename)
+            user_data.photo = filepath
         user_data.save()
     template = 'edit_account.html'
     form = AccountEditForm()
@@ -57,6 +73,7 @@ def edit_account(request):
     form.fields['country'].widget.attrs['placeholder'] = user_data.country
     context = {'edit_account_form': form}
     return render(request, template, context)
+
 
 def login_user(request):
     template = 'login.html'

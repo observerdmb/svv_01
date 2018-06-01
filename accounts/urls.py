@@ -16,5 +16,5 @@ urlpatterns = [
     url('^logout/', logout, {'template_name': 'empty.html', 'next_page': '/login'}, name='logout'),
     url(r'^accounts/register', RegistrationView.as_view(form_class=AccountRegistrationForm), name='registration.register'),
     url(r'^accounts/', include('registration.backends.simple.urls')),
-    url(r'^main/edit_account', views.edit_account, name='edit_page')
+    url(r'^main/edit_account', views.edit_account, name='edit_page'),
 ]
