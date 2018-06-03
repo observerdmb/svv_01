@@ -5,7 +5,8 @@ from .forms import LoginForm, AccountEditForm
 from django.core.files.storage import FileSystemStorage as _FileSystemStorage
 import os
 from datetime import datetime
-from django.utils.functional import LazyObject, cached_property
+from django.utils.functional import cached_property
+from django.utils.datastructures import MultiValueDictKeyError
 
 class FileSystemStorage(_FileSystemStorage):
     @cached_property
@@ -42,32 +43,37 @@ def main(request):
 def edit_account(request):
     user_data = Profile.objects.get(email=request.user)
     if request.method == 'POST':
-        edited_details = request.POST
-        edited_photo = request.FILES
-        if edited_details['full_name'] is not '':
-            user_data.full_name = edited_details['full_name']
-        if edited_details['nick_name'] is not '':
-            user_data.nick_name = edited_details['nick_name']
-        if edited_details['date_of_birth'] is not '':
-            user_data.date_of_birth = edited_details['date_of_birth']
-        if edited_details['about_me'] is not '':
-            user_data.about_me = edited_details['about_me']
-        if edited_details['city'] is not '':
-            user_data.city = edited_details['city']
-        if edited_details['country'] is not '':
-            user_data.country = edited_details['country']
-        if edited_photo['photo']:
-            avatar = edited_photo['photo']
-            fs = FileSystemStorage()
-            filename = fs.save(avatar.name, avatar)
-            filepath = os.path.join(fs.location, filename)
-            user_data.photo = filepath
-        user_data.save()
+        form = AccountEditForm(request.POST, request.FILES)
+        if form.is_valid():
+            edited_details = form.cleaned_data
+            if edited_details['full_name']:
+                user_data.full_name = edited_details['full_name']
+            if edited_details['nick_name']:
+                user_data.nick_name = edited_details['nick_name']
+            if edited_details['date_of_birth']:
+                user_data.date_of_birth = edited_details['date_of_birth']
+            if edited_details['about_me']:
+                user_data.about_me = edited_details['about_me']
+            if edited_details['city']:
+                user_data.city = edited_details['city']
+            if edited_details['country']:
+                user_data.country = edited_details['country']
+            try:
+                if edited_details['photo']:
+                    avatar = edited_details['photo']
+                    fs = FileSystemStorage()
+                    filename = fs.save(avatar.name, avatar)
+                    filepath = os.path.join(fs.location, filename)
+                    user_data.photo = filepath
+            except MultiValueDictKeyError:
+                pass
+            user_data.save()
+        return redirect(main)
     template = 'edit_account.html'
     form = AccountEditForm()
     form.fields['full_name'].widget.attrs['placeholder'] = user_data.full_name
     form.fields['nick_name'].widget.attrs['placeholder'] = user_data.nick_name
-    form.fields['date_of_birth'].widget.attrs['placeholder'] = user_data.date_of_birth
+    form.fields['date_of_birth'].widget.attrs['placeholder'] = user_data.date_of_birth.strftime('%d.%m.%Y')
     form.fields['about_me'].widget.attrs['placeholder'] = user_data.about_me
     form.fields['city'].widget.attrs['placeholder'] = user_data.city
     form.fields['country'].widget.attrs['placeholder'] = user_data.country
@@ -87,6 +93,9 @@ def login_user(request):
             if user is not None:
                 login(request, user)
                 return redirect(main)
+            else:
+                invalid_login = True
+                return render(request, template, {'login_form': form, 'invalid_login': invalid_login})
         print(form)
     form = LoginForm()
     return render(request, template, {'login_form': form})

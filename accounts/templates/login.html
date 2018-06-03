@@ -14,5 +14,8 @@
                 <td><input type="submit" value="Вход" name="login_form"></td>
             </tr>
         </table>
+    {% if invalid_login == True %}
+        <h4>Введены неверные email или пароль. Повторите ввод. <br>Обратите внимание, пароль чувствителен к регистру.</h4>
+    {% endif %}
     </form>
 {% endblock %}
