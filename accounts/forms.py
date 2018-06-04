@@ -6,7 +6,6 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from registration.forms import RegistrationForm
 
 
-
 class LoginForm(forms.Form):
     email = forms.EmailField(label='Ваш E-Mail:')
     password = forms.CharField(widget=forms.PasswordInput, label='Пароль:')
