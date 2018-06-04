@@ -71,12 +71,18 @@ def edit_account(request):
         return redirect(main)
     template = 'edit_account.html'
     form = AccountEditForm()
-    form.fields['full_name'].widget.attrs['placeholder'] = user_data.full_name
-    form.fields['nick_name'].widget.attrs['placeholder'] = user_data.nick_name
-    form.fields['date_of_birth'].widget.attrs['placeholder'] = user_data.date_of_birth.strftime('%d.%m.%Y')
-    form.fields['about_me'].widget.attrs['placeholder'] = user_data.about_me
-    form.fields['city'].widget.attrs['placeholder'] = user_data.city
-    form.fields['country'].widget.attrs['placeholder'] = user_data.country
+    if user_data.full_name:
+        form.fields['full_name'].widget.attrs['placeholder'] = user_data.full_name
+    if user_data.nick_name:
+        form.fields['nick_name'].widget.attrs['placeholder'] = user_data.nick_name
+    if user_data.date_of_birth:
+        form.fields['date_of_birth'].widget.attrs['placeholder'] = user_data.date_of_birth.strftime('%d.%m.%Y')
+    if user_data.about_me:
+        form.fields['about_me'].widget.attrs['placeholder'] = user_data.about_me
+    if user_data.city:
+        form.fields['city'].widget.attrs['placeholder'] = user_data.city
+    if user_data.country:
+        form.fields['country'].widget.attrs['placeholder'] = user_data.country
     context = {'edit_account_form': form}
     return render(request, template, context)
 
