@@ -3,6 +3,7 @@ from . import views
 from django.contrib.auth.views import logout
 from registration.backends.simple.views import RegistrationView as _RegistrationView
 from .forms import AccountRegistrationForm
+from django.views.generic import RedirectView
 
 class RegistrationView(_RegistrationView):
     def get_success_url(self, user):
@@ -17,4 +18,5 @@ urlpatterns = [
     url(r'^accounts/register', RegistrationView.as_view(form_class=AccountRegistrationForm), name='registration.register'),
     url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^main/edit_account', views.edit_account, name='edit_page'),
+    url(r'^$', RedirectView.as_view(pattern_name='main_page'))
 ]

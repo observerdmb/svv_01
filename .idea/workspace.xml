@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3677e182-f3d5-41cb-8d41-f10c7a1c91e6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/svv_01/settings.py" afterPath="$PROJECT_DIR$/svv_01/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/svv_01.iml" afterPath="$PROJECT_DIR$/.idea/svv_01.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/base.html" afterPath="$PROJECT_DIR$/accounts/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/urls.py" afterPath="$PROJECT_DIR$/accounts/urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -87,12 +91,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/svv_01/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="27" column="62" lean-forward="false" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/accounts/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="986">
+              <caret line="58" column="6" lean-forward="true" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/accounts/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="62" lean-forward="false" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,18 +164,18 @@
         <option value="$PROJECT_DIR$/accounts/admin.py" />
         <option value="$PROJECT_DIR$/svv_01/urls.py" />
         <option value="$PROJECT_DIR$/accounts/templates/empty.html" />
-        <option value="$PROJECT_DIR$/accounts/templates/base.html" />
         <option value="$PROJECT_DIR$/accounts/static/css/style.css" />
         <option value="$PROJECT_DIR$/accounts/templates/main.html" />
         <option value="$PROJECT_DIR$/accounts/models.py" />
         <option value="$PROJECT_DIR$/accounts/templates/edit_account.html" />
         <option value="$PROJECT_DIR$/accounts/templates/edit photo.html" />
-        <option value="$PROJECT_DIR$/accounts/urls.py" />
         <option value="$PROJECT_DIR$/accounts/templates/login.html" />
         <option value="$PROJECT_DIR$/accounts/forms.py" />
         <option value="$PROJECT_DIR$/accounts/templates/registration/registration_form.html" />
         <option value="$PROJECT_DIR$/accounts/views.py" />
         <option value="$PROJECT_DIR$/svv_01/settings.py" />
+        <option value="$PROJECT_DIR$/accounts/templates/base.html" />
+        <option value="$PROJECT_DIR$/accounts/urls.py" />
       </list>
     </option>
   </component>
@@ -195,6 +221,25 @@
             <path>
               <item name="svv_01" type="b2602c69:ProjectViewProjectNode" />
               <item name="svv_01" type="462c0819:PsiDirectoryNode" />
+              <item name="accounts" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="svv_01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="svv_01" type="462c0819:PsiDirectoryNode" />
+              <item name="accounts" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="svv_01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="svv_01" type="462c0819:PsiDirectoryNode" />
+              <item name="accounts" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="svv_01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="svv_01" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -232,10 +277,10 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="svv_01.settings" />
+        <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Tatyana\AppData\Local\Programs\Python\Python36\python.exe" />
+      <option name="SDK_HOME" value="C:\Python34\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -271,11 +316,11 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.175" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32418162" sideWeight="0.546875" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32418162" sideWeight="0.54895836" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32464147" sideWeight="0.453125" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32418162" sideWeight="0.45104167" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -355,13 +400,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="10" lean-forward="false" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/db/models/base.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/contrib/auth/base_user.py" />
     <entry file="file://C:/Python34/Lib/site-packages/PIL/Image.py" />
@@ -369,6 +407,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="77" lean-forward="false" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="77" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -384,13 +423,6 @@
     <entry file="file://C:/Python34/Lib/site-packages/django/core/files/uploadedfile.py" />
     <entry file="file://C:/Python34/Lib/site-packages/django/utils/deconstruct.py" />
     <entry file="file://C:/Python34/Lib/site-packages/django/core/files/storage.py" />
-    <entry file="file://$PROJECT_DIR$/accounts/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/utils/deprecation.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/core/handlers/exception.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/socketserver.py" />
@@ -476,6 +508,24 @@
         <state relative-caret-position="255">
           <caret line="27" column="62" lean-forward="false" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="58" column="6" lean-forward="true" selection-start-line="58" selection-start-column="6" selection-end-line="58" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="62" lean-forward="false" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
