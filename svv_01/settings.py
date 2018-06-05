@@ -25,7 +25,7 @@ SECRET_KEY = 'q1dxt)jt=8_bfet4z2hhnid%8!avaq&^(cfzxy37+*xt@wkur$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['observerdmb.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
