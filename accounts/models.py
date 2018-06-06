@@ -42,7 +42,7 @@ class Profile(AbstractBaseUser):
     date_of_birth = models.DateField(null=True, blank=True)
     country = models.CharField(verbose_name='Страна', max_length=30, null=True, blank=True)
     city = models.CharField(verbose_name='Город', max_length=30, null=True, blank=True)
-    photo = models.ImageField(upload_to='profiles//%Y/%m/%d/', verbose_name='Фото', blank=True, null=True)
+    photo = models.ImageField(upload_to='profiles/%Y/%m/%d/', verbose_name='Фото', blank=True, null=True)
     about_me = models.TextField(verbose_name='обо мне', blank=True, null=True)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)

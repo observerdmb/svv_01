@@ -13,8 +13,12 @@ class FileSystemStorage(_FileSystemStorage):
     def base_location(self):
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         MEDIA_ROOT = os.path.join(BASE_DIR, 'img')
-        path_suffix = datetime.today().strftime('profiles\\%Y\\%m\\%d')
-        filepath = os.path.join(MEDIA_ROOT, path_suffix)
+        path_suffix ='profiles'
+        path_year = datetime.today().strftime('%Y')
+        path_month = datetime.today().strftime('%m')
+        path_day = datetime.today().strftime('%d')
+        filepath = os.path.join(MEDIA_ROOT, path_suffix, path_year, path_month, path_day)
+        print(filepath)
         return self._value_or_setting(self._location, filepath)
 
 class NoPhoto():
