@@ -13,6 +13,21 @@ body {
 	width: 1280px;
 }
 
+#nav_left {
+	float: left;
+	height: 50px;
+	width: 700px;
+}
+
+#nav_right {
+    /*background: red;*/
+	float: right;
+	height: 50px;
+	width: 450px;
+    margin-right: 0px;
+}
+
+
 #menu {
 	background: linear-gradient(#000032, #4f8688);
 	float: left;
@@ -39,7 +54,6 @@ body {
 	border-radius: 10px;
 	height: 545px;
 	width: 310px;
-	/*position: absolute;*/
 	background: white;
 	padding: 10px;
 	margin: 10px;
