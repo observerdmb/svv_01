@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div id="content_header">
+        <div id="vcenter">Результаты поиска:</div>
+    </div>
+    {% for result in results %}
+        <div id="search_block">
+            <div id="vcenter">
+                <img src="{{ result.photo.url }}" height=50>
+                {{ result.nick_name }} {{ result.email }}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

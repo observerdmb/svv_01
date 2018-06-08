@@ -27,6 +27,13 @@ body {
     margin-right: 0px;
 }
 
+#nav_right_search {
+	float: right;
+	height: 50px;
+	width: 240px;
+	margin-right: 40px ;
+}
+
 
 #menu {
 	background: linear-gradient(#000032, #4f8688);
@@ -73,6 +80,14 @@ body {
 
 #clear {
 	clear: both;
+}
+
+#search_block {
+	height: 80px;
+	background: white;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 10px;
 }
 
 #footer {

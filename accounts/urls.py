@@ -12,6 +12,7 @@ class RegistrationView(_RegistrationView):
 
 urlpatterns = [
     url(r'main/$', views.main, name='main_page'),
+    url(r'^search/', views.search, name='search'),
     url(r'^not_exists/', views.empty_view, name='empty_page'),
     url(r'^login/', views.login_user, name='log-in'),
     url(r'^logout/', logout, {'template_name': 'empty.html', 'next_page': '/main'}, name='logout'),

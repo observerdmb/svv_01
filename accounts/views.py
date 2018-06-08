@@ -91,6 +91,16 @@ def edit_account(request):
     return render(request, template, context)
 
 
+def search(request):
+    template = 'search.html'
+    context = {}
+    if request.method == 'POST':
+        query = request.POST['query']
+        result = Profile.objects.filter(nick_name=query)
+        context['results'] = result
+    return render(request, template, context)
+
+
 def login_user(request):
     template = 'login.html'
     if request.method == 'POST':

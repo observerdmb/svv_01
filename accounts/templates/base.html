@@ -27,6 +27,14 @@
                             <input type="password" name="password" placeholder="Password">
                             <input type="submit" value="Вход">
                         </form>
+                    {% else %}
+                        <div id="nav_right_search">
+                        <form action="{% url 'search' %}" method="post" name="search_form">
+                            {% csrf_token %}
+                            <input type="search" name="query">
+                            <input type="submit" value="Поиск" onclick="window.location.reload()">
+                        </form>
+                        </div>
                     {% endif %}
                 </div>
             </div>
