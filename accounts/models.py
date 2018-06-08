@@ -53,6 +53,7 @@ class Profile(AbstractBaseUser):
     # REQUIRED_FIELDS = ['full_name', 'nick_name']
 
     def save(self, *args, **kwargs):
+        self.email = self.email.lower()
         super(Profile, self).save(*args, **kwargs)
         if self.photo:
             wanted_dim = 250

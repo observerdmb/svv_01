@@ -22,7 +22,7 @@ class FileSystemStorage(_FileSystemStorage):
         return self._value_or_setting(self._location, filepath)
 
 class NoPhoto():
-    url = 'media\\profiles\\unknown.png'
+    url = '/media/profiles/unknown.png'
 
 
 def main(request):
