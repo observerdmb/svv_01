@@ -80,7 +80,7 @@ def edit_account(request):
             except MultiValueDictKeyError:
                 pass
             user_data.save()
-        return redirect(main)
+        return redirect(redirect_to_main)
     template = 'edit_account.html'
     form = AccountEditForm()
     if user_data.full_name:
