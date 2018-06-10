@@ -7,8 +7,12 @@
     {% for result in results %}
         <div id="search_block">
             <div id="vcenter">
-                <img src="{{ result.photo.url }}" height=50>
-                {{ result.nick_name }} {{ result.email }}
+                {% if result.photo %}
+                    <img src="{{ result.photo.url }}" height=50>
+                {% else %}
+                    <img src="/media/profiles/unknown.png" height="50">
+                {% endif %}
+                <a href="/id={{ result.id }}">{{ result.nick_name }} </a>{{ result.email }}
             </div>
         </div>
     {% endfor %}

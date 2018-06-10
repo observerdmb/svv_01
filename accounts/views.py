@@ -1,5 +1,7 @@
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
+from django.urls import reverse
+
 from .models import Profile
 from .forms import LoginForm, AccountEditForm
 from django.core.files.storage import FileSystemStorage as _FileSystemStorage
@@ -18,18 +20,24 @@ class FileSystemStorage(_FileSystemStorage):
         path_month = datetime.today().strftime('%m')
         path_day = datetime.today().strftime('%d')
         filepath = os.path.join(MEDIA_ROOT, path_suffix, path_year, path_month, path_day)
-        print(filepath)
         return self._value_or_setting(self._location, filepath)
 
 class NoPhoto():
     url = '/media/profiles/unknown.png'
 
+def redirect_to_main(request):
+    if request.user.is_authenticated:
+        id = request.user.id
+        return redirect(reverse('profile', kwargs={'id': id}))
+    else:
+        return render(request, 'main.html', {})
 
-def main(request):
+
+def main(request, **kwargs):
     template = 'main.html'
     context = {}
     if request.user.is_authenticated:
-        user_data = Profile.objects.get(email=request.user)
+        user_data = Profile.objects.get(id=kwargs['id'])
         context['email'] = user_data.email
         context['nick'] = user_data.nick_name
         context['full_name'] = user_data.full_name
@@ -112,7 +120,7 @@ def login_user(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect(main)
+                return redirect(redirect_to_main)
             else:
                 invalid_login = True
                 return render(request, template, {'login_form': form, 'invalid_login': invalid_login})
