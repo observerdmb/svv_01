@@ -3,35 +3,35 @@
 {% block content %}
     {% if user.is_authenticated %}
         <div id="content_header">
-            <div id="vcenter">Моя страница: <a href="{% url 'edit_page' %}">редактировать</a> </div>
+            <div id="vcenter">My page <a href="{% url 'edit_page' %}">edit</a> </div>
         </div>
         <div id="content_detail">
             <div id="photo">
                 <img class="displayed" src="{{ photo.url }}">
                 <h5 class="centered">{{ nick }}</h5>
                 {% if full_name %}
-                    <h5>Имя: {{ full_name }}</h5>
+                    <h5>Name: {{ full_name }}</h5>
                 {% endif %}
                 <h5>Email: {{ email }}</h5>
                 {% if country %}
-                    <h5>Страна: {{ country }}</h5>
+                    <h5>Country: {{ country }}</h5>
                 {% endif %}
                 {% if city %}
-                    <h5>Город: {{ city }}</h5>
+                    <h5>City: {{ city }}</h5>
                 {% endif %}
                 {% if birth %}
-                    <h5>Дата рождения: {{ birth }}</h5>
+                    <h5>Date of birth: {{ birth }}</h5>
                 {% endif %}
             </div>
         </div>
         <div id="content_main">
             <h1>main content</h1>
-            <p>Обо мне:</p>
+            <p>About me:</p>
             <p>{{ about_me }}</p>
         </div>
     {% else %}
         <div id="vcenter" align="center">
-            <h1>Будьте так любезны, залогиньтесь</h1>
+            <h1>Please, log-in</h1>
         </div>
     {% endif %}
 {% endblock %}

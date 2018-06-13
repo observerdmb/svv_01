@@ -12,11 +12,11 @@
         <div id="navigation">
             <div id="vcenter">
                 <div id="nav_left">
-                    <a href="{% url 'empty_page' %}">Кто мы такие</a>  |  <a href="{% url 'empty_page' %}">Партнерам</a>  |  <a href="{% url 'empty_page' %}">Правила</a>  |
+                    <a href="{% url 'empty_page' %}">Who we are</a>  |  <a href="{% url 'empty_page' %}">Partnership</a>  |  <a href="{% url 'empty_page' %}">Rules</a>  |
                     {% if user.is_authenticated %}
-                        <a href="{% url 'logout' %}">Выход</a>
+                        <a href="{% url 'logout' %}">Exit</a>
                     {% else %}
-                        <a href="/accounts/register">Регистрация</a>
+                        <a href="/accounts/register">Register</a>
                     {% endif %}
                 </div>
                 <div id="nav_right">
@@ -25,14 +25,14 @@
                             {% csrf_token %}
                             <input type="email" name="email" placeholder="Email">
                             <input type="password" name="password" placeholder="Password">
-                            <input type="submit" value="Вход">
+                            <input type="submit" value="Log-in">
                         </form>
                     {% else %}
                         <div id="nav_right_search">
                         <form action="{% url 'search' %}" method="post" name="search_form">
                             {% csrf_token %}
                             <input type="search" name="query">
-                            <input type="submit" value="Поиск" onclick="window.location.reload()">
+                            <input type="submit" value="Search" onclick="window.location.reload()">
                         </form>
                         </div>
                     {% endif %}
@@ -43,19 +43,19 @@
     {% block aside %}
         <div id="menu">
             <H4>Главное</H4>
-            <p><a href="{% url 'main_page' %}">Моя страница</a></p>
-            <p><a href="{% url 'empty_page' %}">Друзья</a></p>
-            <p><a href="{% url 'empty_page' %}">Подписки</a></p>
-            <p><a href="{% url 'empty_page' %}">Новости</a></p>
-            <p><a href="{% url 'empty_page' %}">Сообщения</a></p>
-            <p><a href="{% url 'empty_page' %}">Чат</a></p>
+            <p><a href="{% url 'main_page' %}">My page</a></p>
+            <p><a href="{% url 'empty_page' %}">Friends</a></p>
+            <p><a href="{% url 'empty_page' %}">Subscriptions</a></p>
+            <p><a href="{% url 'empty_page' %}">News</a></p>
+            <p><a href="{% url 'empty_page' %}">Messages</a></p>
+            <p><a href="{% url 'empty_page' %}">Chat</a></p>
             <H4>Покупки</H4>
-            <p><a href="{% url 'empty_page' %}">Объявления</a></p>
-            <p><a href="{% url 'empty_page' %}">Мои заказы</a></p>
-            <p><a href="{% url 'empty_page' %}">Обмен</a></p>
+            <p><a href="{% url 'empty_page' %}">Adverts</a></p>
+            <p><a href="{% url 'empty_page' %}">My orders</a></p>
+            <p><a href="{% url 'empty_page' %}">Exchange service</a></p>
             <H4>Полезно</H4>
-            <p><a href="{% url 'empty_page' %}">Майнинг</a></p>
-            <p><a href="{% url 'empty_page' %}">Биржи</a></p>
+            <p><a href="{% url 'empty_page' %}">Mining</a></p>
+            <p><a href="{% url 'empty_page' %}">Exchange</a></p>
             <p><a href="{% url 'empty_page' %}">ICO</a></p>
         </div>
     {% endblock %}
@@ -72,7 +72,7 @@
 
     <div id="footer">
         <div id="vcenter">
-            <div id="footer_text" align="center">Вот такая вот ерунда, товарищи!</div>
+            <div id="footer_text" align="center">Something like this, comrads</div>
         </div>
     </div>
 </div>

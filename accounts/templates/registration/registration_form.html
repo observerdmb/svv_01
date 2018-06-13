@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <h1>Регистрация</h1>
+    <h1>Register form:</h1>
     <form action="" method="post">
         {% csrf_token %}
         <table>
@@ -15,7 +15,7 @@
                 <td> {{ form.non_field_errors }}</td>
             </tr>
         </table>
-        <p>Пароль должен содержать не менее 8 символов, включающих в себя, как минимум одну букву латинского алфавита.</p>
-        <input type="submit" name="reg_form" value="Зарегистрировать">
+        <p> The password must be contains not less than 8 alphanumeric symbols, including, at least, one alphabet symbol.</p>
+        <input type="submit" name="reg_form" value="Register">
     </form>
 {% endblock %}
