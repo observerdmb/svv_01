@@ -1,26 +1,25 @@
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
 from django import forms
-from django.core.exceptions import ValidationError
 from .models import Profile
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from registration.forms import RegistrationForm
 
 
 class LoginForm(forms.Form):
-    email = forms.EmailField(label='Ваш E-Mail:')
-    password = forms.CharField(widget=forms.PasswordInput, label='Пароль:')
+    email = forms.EmailField(label='Your E-Mail:')
+    password = forms.CharField(widget=forms.PasswordInput, label='Password:')
 
 
 class AccountRegistrationForm(RegistrationForm):
     def clean(self):
         try:
             if Profile.objects.get(email=self.cleaned_data['email']):
-                raise forms.ValidationError('Этот Email уже зарегистрирован, используйте другой.')
+                raise forms.ValidationError('This username already in a use. Choose another please.')
         except Profile.DoesNotExist:
             pass
             try:
                 if Profile.objects.get(nick_name=self.cleaned_data['nick_name']):
-                    raise forms.ValidationError('Этот ник уже используется, выберите другой.')
+                    raise forms.ValidationError('This nickname already in a use. Choose another please.')
             except Profile.DoesNotExist:
                 pass
             return self.cleaned_data

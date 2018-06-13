@@ -1,7 +1,6 @@
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from django.urls import reverse
-
 from .models import Profile
 from .forms import LoginForm, AccountEditForm
 from django.core.files.storage import FileSystemStorage as _FileSystemStorage
