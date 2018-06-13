@@ -30,6 +30,7 @@ class AccountRegistrationForm(RegistrationForm):
 
 
 class AccountEditForm(forms.ModelForm):
+    date_of_birth = forms.DateField(input_formats=('%d.%m.%Y', '%Y-%m-%d'))
     class Meta:
         model = Profile
         exclude = ['email', 'is_active', 'is_admin', 'last_login', 'password']
