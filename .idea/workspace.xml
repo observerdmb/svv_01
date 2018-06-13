@@ -2,34 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3677e182-f3d5-41cb-8d41-f10c7a1c91e6" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/05/27/puppet.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/05/28/Puppy.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/05/29/Puppy.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/05/29/no_pic.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/05/30/183775451.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/06/01/Desert.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/06/01/Fear.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/06/01/Grim_black_train.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/06/01/Koala.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/06/01/Koala_LWxcTeR.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/06/01/Lighthouse.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/06/03/Koala.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/06/03/Koala_g0HSzzY.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/06/03/Penguins.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/06/04/Penguins.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/06/06/9d0b19b7-b619-4ae5-9492-d9b7f00b47a6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/06/06/Puppy.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/06/08/99px_ru_wallpaper_143743_golova_sobaki_porodi_haski_s_otkritoj_pastu.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/06/08/99px_ru_wallpaper_143743_golova_sobaki_porodi_haski_s_otkritoj_pastu_ZpNAx9V.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/06/08/Puppy.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/profiles/2018/06/10/99px_ru_wallpaper_28285_milij_shenok_sobaki_haski.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/base.html" afterPath="$PROJECT_DIR$/accounts/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/edit_account.html" afterPath="$PROJECT_DIR$/accounts/templates/edit_account.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/login.html" afterPath="$PROJECT_DIR$/accounts/templates/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/main.html" afterPath="$PROJECT_DIR$/accounts/templates/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/registration/registration_form.html" afterPath="$PROJECT_DIR$/accounts/templates/registration/registration_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/search.html" afterPath="$PROJECT_DIR$/accounts/templates/search.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/svv_01/settings.py" afterPath="$PROJECT_DIR$/svv_01/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/svv_01/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1972">
-              <caret line="116" column="32" lean-forward="true" selection-start-line="116" selection-start-column="32" selection-end-line="116" selection-end-column="32" />
+              <caret line="116" column="32" lean-forward="false" selection-start-line="116" selection-start-column="32" selection-end-line="116" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -77,17 +50,17 @@
         <entry file="file://$PROJECT_DIR$/accounts/templates/search.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/accounts/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="47" column="61" lean-forward="false" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
+            <state relative-caret-position="165">
+              <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -97,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/accounts/templates/edit_account.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+              <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -133,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registration_form.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="registration_form.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/accounts/templates/registration/registration_form.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+              <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -182,11 +155,11 @@
         <option value="$PROJECT_DIR$/accounts/models.py" />
         <option value="$PROJECT_DIR$/svv_01/settings.py" />
         <option value="$PROJECT_DIR$/accounts/templates/search.html" />
-        <option value="$PROJECT_DIR$/accounts/templates/base.html" />
         <option value="$PROJECT_DIR$/accounts/templates/edit_account.html" />
         <option value="$PROJECT_DIR$/accounts/templates/login.html" />
         <option value="$PROJECT_DIR$/accounts/templates/main.html" />
         <option value="$PROJECT_DIR$/accounts/templates/registration/registration_form.html" />
+        <option value="$PROJECT_DIR$/accounts/templates/base.html" />
       </list>
     </option>
   </component>
@@ -474,7 +447,7 @@
     <entry file="file://$PROJECT_DIR$/svv_01/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1972">
-          <caret line="116" column="32" lean-forward="true" selection-start-line="116" selection-start-column="32" selection-end-line="116" selection-end-column="32" />
+          <caret line="116" column="32" lean-forward="false" selection-start-line="116" selection-start-column="32" selection-end-line="116" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -482,15 +455,7 @@
     <entry file="file://$PROJECT_DIR$/accounts/templates/search.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="61" lean-forward="false" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -498,7 +463,7 @@
     <entry file="file://$PROJECT_DIR$/accounts/templates/edit_account.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -530,7 +495,15 @@
     <entry file="file://$PROJECT_DIR$/accounts/templates/registration/registration_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
           <folding />
         </state>
       </provider>
