@@ -28,6 +28,14 @@ DEBUG = True
 ALLOWED_HOSTS = ['observerdmb.pythonanywhere.com', '127.0.0.1']
 
 
+# Email settings
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = '465'
+EMAIL_HOST_USER = 'vasyarus'
+EMAIL_HOST_PASSWORD = 'Ac1452818'
+EMAIL_USE_SSL = True
+
+
 # Application definition
 
 INSTALLED_APPS = [
