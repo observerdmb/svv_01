@@ -4,6 +4,7 @@ from django.db import models
 from django.contrib.auth.models import (
     BaseUserManager, AbstractBaseUser
 )
+from django.utils import timezone
 
 
 
@@ -44,6 +45,7 @@ class Profile(AbstractBaseUser):
     city = models.CharField(verbose_name='City', max_length=30, null=True, blank=True)
     photo = models.ImageField(upload_to='profiles/%Y/%m/%d/', verbose_name='Фото', blank=True, null=True)
     about_me = models.TextField(verbose_name='About me', blank=True, null=True)
+    date_joined = models.DateTimeField(blank=True, null=True, default=timezone.now)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
 

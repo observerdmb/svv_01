@@ -34,18 +34,19 @@ EMAIL_PORT = '465'
 EMAIL_HOST_USER = 'vasyarus'
 EMAIL_HOST_PASSWORD = 'Ac1452818'
 EMAIL_USE_SSL = True
-
+DEFAULT_FROM_EMAIL = 'vasyarus@yandex.ru'
 
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
+    'registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts'
 ]
 
 MIDDLEWARE = [
@@ -63,7 +64,7 @@ ROOT_URLCONF = 'svv_01.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,6 +124,10 @@ USE_L10N = True
 USE_TZ = True
 
 AUTH_USER_MODEL = 'accounts.Profile'
+
+# registration:
+ACCOUNT_ACTIVATION_DAYS = 3
+REGISTRATION_AUTO_LOGIN = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
