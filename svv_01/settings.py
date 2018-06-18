@@ -29,12 +29,18 @@ ALLOWED_HOSTS = ['observerdmb.pythonanywhere.com', '127.0.0.1']
 
 
 # Email settings
-EMAIL_HOST = 'smtp.yandex.ru'
-EMAIL_PORT = '465'
-EMAIL_HOST_USER = 'vasyarus'
-EMAIL_HOST_PASSWORD = 'Ac1452818'
-EMAIL_USE_SSL = True
-DEFAULT_FROM_EMAIL = 'vasyarus@yandex.ru'
+# EMAIL_HOST = 'smtp.yandex.ru'
+# EMAIL_PORT = '465'
+# EMAIL_HOST_USER = 'vasyarus'
+# EMAIL_HOST_PASSWORD = 'Ac1452818'
+# EMAIL_USE_SSL = True
+# DEFAULT_FROM_EMAIL = 'vasyarus@yandex.ru'
+
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "v9816827022@gmail.com"
+EMAIL_HOST_PASSWORD = 'Aa514125688'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # Application definition
 
