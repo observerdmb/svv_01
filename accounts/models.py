@@ -48,6 +48,7 @@ class Profile(AbstractBaseUser):
     date_joined = models.DateTimeField(blank=True, null=True, default=timezone.now)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
+    subscription = models.ManyToManyField('self', blank=True, symmetrical=False)
 
     objects = ProfileManager()
 
@@ -97,3 +98,7 @@ class Profile(AbstractBaseUser):
         "Is the user a member of staff?"
         # Simplest possible answer: All admins are staff
         return self.is_admin
+
+# class Subscriptions(models.Model):
+#     subscription = models.ManyToManyField(Profile)
+

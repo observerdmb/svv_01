@@ -44,6 +44,8 @@ def main(request, **kwargs):
         context['city'] = user_data.city
         context['birth'] = user_data.date_of_birth
         context['about_me'] = user_data.about_me
+        context['page_id'] = kwargs['id']
+        context['user_id'] = user_data.id
         if user_data.photo:
             context['photo'] = user_data.photo
         else:

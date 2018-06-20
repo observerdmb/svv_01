@@ -3,7 +3,15 @@
 {% block content %}
     {% if user.is_authenticated %}
         <div id="content_header">
+            {% if page_id == user_id %}
             <div id="vcenter">My page <a href="{% url 'edit_page' %}">edit</a> </div>
+            {% else %}
+             <div id="vcenter">
+                <form method="post" action="" name="add_subscription">
+                    <input type="submit" name="{{ page_id }}" value="Подписаться">
+                </form>
+             </div>
+                {% endif %}
         </div>
         <div id="content_detail">
             <div id="photo">

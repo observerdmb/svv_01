@@ -76,7 +76,7 @@ class UserChangeForm(forms.ModelForm):
 
     class Meta:
         model = Profile
-        fields = ('email', 'password', 'full_name', 'nick_name', 'date_of_birth', 'about_me', 'photo', 'is_active', 'is_admin')
+        fields = ('email', 'password', 'full_name', 'nick_name', 'date_of_birth', 'about_me', 'photo', 'is_active', 'is_admin', 'subscription')
 
     def clean_password(self):
         return self.initial["password"]
@@ -90,7 +90,7 @@ class UserAdmin(BaseUserAdmin):
     list_filter = ('is_admin',)
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        ('Personal info', {'fields': ('date_of_birth', 'nick_name', 'full_name', 'about_me', 'photo')}),
+        ('Personal info', {'fields': ('date_of_birth', 'nick_name', 'full_name', 'about_me', 'photo', 'subscription')}),
         ('Permissions', {'fields': ('is_admin',)}),
     )
     # add_fieldsets is not a standard ModelAdmin attribute. UserAdmin
